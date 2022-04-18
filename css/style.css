@@ -2,6 +2,7 @@
     --primary: rgba(251, 135, 239, 1);
     --secondary: rgba(239, 99, 200, 0.3);
 }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -43,6 +44,7 @@ nav ul li a {
 img.header-bg {
     position: absolute;
     z-index: -1;
+    height: 100vh;
     min-width: 100%;
     max-width: 100%;
 }
@@ -55,18 +57,27 @@ header {
     justify-content: space-around;
     padding: 0 3rem;
     animation: showIn ease-in 0.25s;
+    margin-top: 2rem;
 }
 
 header h2 {
     font-weight: bold;
-    font-size: 64px;
+    font-size: 48px;
     color: #fff;
-    margin: 1.5rem 0;
+    margin: 3rem 0;
 }
-
-header p {
+.header-heading{
+    font-weight: bold;
+    font-size: 25px;
+    color: #fff;
+    margin: 3rem 0 0 1rem;
+}
+header span {
+    display: block;
     color: #fff;
     font-weight: lighter;
+    font-size: 24px;
+    width: 75%;
 }
 
 
@@ -76,10 +87,413 @@ header h2::selection, header p::selection  {
 
 header img {
     max-width: 300px;
-    margin: 2rem 0;
+    margin: 5rem;
     border-radius: 50%;
     border: 3px solid #fff;
     animation: showIn ease-in 1s;
-
 }
+#about{
+    margin-top: 15rem;
+    display: flex;
+    /* background: url("../images/about-bg.svg"); */
+    background-size: contain;
+    
+}
+.text{
+    margin-left: 5rem;
+    margin-right: 2rem;
+    margin-top: 5rem;
+}
+.text .heading{
+    font-weight: bold;
+    font-size: 48px;
+    margin: 3rem 0;
+    color: rgb(252, 124, 220);
+}
+.text  p{
+    display: block;
+    /* color: #fff; */
+    font-weight: lighter;
+    font-size: 18px;
+    width: 90%;
+}
+#about img{
+    max-width: 350px;
+    margin: 5rem;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    animation: showIn ease-in 1s;
+}
+
+.dropbtn {
+    display: none;
+}
+#education{
+    margin-top: 5rem;
+    display: flex;
+    background-size: contain;
+}
+.content{
+    margin-left: 7rem;
+    margin-right: 2rem;
+    color:teal;
+    /* text-align: center; */
+    
+}
+.content .heading{
+    font-weight: bold;
+    font-size: 48px;
+    margin: 3rem 0;
+    
+}
+.edu{
+    font-size: 1rem;
+    color: #000;
+}
+.content  p{
+    display: block;
+    /* color: #fff; */
+    font-weight: lighter;
+    font-size: 18px;
+    width: 90%;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+#education img{
+    max-width: 350px;
+    margin: 5rem;
+    height: 281px;
+    border-radius: 10%;
+    border: 3px solid #fff;
+    animation: showIn ease-in 1s;
+}
+.heading-skill{
+    height: 50px;
+    width: 30rem;
+    margin-left: 32rem;
+}
+.heading-skill h2{
+    font-size: 3.5rem;
+    font-weight:900;
+    color: teal;
+}
+
+#skills{
+    display: flex; 
+    margin: 4rem 4rem 0 4rem;
+    justify-content: center;
+}
+.python{
+    width: 24rem;
+    height: 15rem;
+    margin-right: 4rem;
+    
+    
+}
+.python .python-p{
+    border-radius: 10px;
+    background: linear-gradient(-235deg,#347AB4 ,#FFCA1D);
+    height: 15rem;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 3rem;
+    /* width: 10rem; */
+}
+.python .python-p p{
+    font-weight: lighter;
+    display: block;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    text-align: center;
+    padding-top: 2.5rem;
+}
+.python .python-img img{
+    width: 7rem;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    background-color: #fff;
+    margin-bottom: -3rem;
+    margin-left: 3rem;
+}
+.jupyter{
+    width: 24rem;
+    height: 15rem;
+    margin-right: 4rem;
+}
+.jupyter .jupyter-p{
+    border-radius: 10px;
+    background: linear-gradient(-235deg,#e47a3d ,#bbb3c4);
+    height: 15rem;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 3rem;
+    /* width: 10rem; */
+}
+.jupyter .jupyter-p p{
+    font-weight: lighter;
+    display: block;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    padding: 1rem;
+    padding-top: 2.5rem;
+}
+.jupyter .jupyter-img img{
+    width: 7rem;
+    height: 112.4px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    background-color: #fff;
+    margin-bottom: -3rem;
+    margin-left: 3rem;
+}
+.git{
+    width: 24rem;
+    height: 15rem;
+}
+.git .git-p{
+    border-radius: 10px;
+    padding-top: 3rem;
+    background: linear-gradient(-235deg,#F03C2E,#FFFFFF);
+    height: 15rem;
+    text-align: center;
+    vertical-align: middle;
+    /* width: 10rem; */
+}
+.git .git-p p{
+    font-weight: lighter;
+    display: block;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    padding: 1rem;
+    padding-top: 2.5rem;
+}
+.git .git-img img{
+    width: 7rem;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    background-color: #fff;
+    margin-bottom: -3rem;
+    margin-left: 3rem;
+}
+#contact{
+	margin-top: 10rem;
+	box-sizing: border-box;
+	padding: 20px; 
+}
+.contact-content{
+    display: flex;
+    
+}  
+#contact .icons{
+    margin-left: 7rem;
+    display: flex;
+}
+#contact .icons ul{
+    width: 400px;
+    
+}
+#contact .icons ul li{
+    padding: 1rem;
+    position: relative;
+    list-style: none;
+}
+#contact .icons ul li a{
+    text-decoration: none;
+    list-style: none;
+    color: #000;
+    padding: 1rem;
+    vertical-align: .5rem;
+}
+#contact .icons ul li .image-phone{
+    width: 30px;
+    vertical-align: .7rem;
+}
+
+#contact .icons ul li .phone{
+    color: #000;
+    padding: .5rem;
+    margin-bottom: 7rem;
+    vertical-align: .5rem;
+}
+.contact-heading{
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 3rem;
+    font-weight:900;
+    color: teal;
+    
+}
+.content-contact{
+    margin-left: 2rem;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+}
+.form-group input{
+    height: 2rem;
+    margin-bottom: 2rem;
+}
+.form-group label{
+    margin-bottom: .5rem;
+}
+.form-group textarea{
+    height: 5rem;
+}
+.form-group button{
+    margin-top: 2rem;
+    height: 3rem;
+    background-color: rgb(202, 200, 200);
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.footer-note{
+    text-align: center;
+    background-color: rgb(245, 160, 217);
+    color: white;
+    padding: 2rem;
+    margin-top: 5rem;
+}
+
+
+@media only screen and (max-width: 600px){
+    #about{
+        margin: 0;
+    }
+    #about img{
+       display: none;
+    }
+    .content{
+        padding: 2rem;
+    }
+    .heading-skill{
+        padding-left: 14rem;
+        margin-left: 0;
+    }
+    .heading-skill h2{
+        font-size: 1.5rem;
+    }
+    .dropbtn {
+        display: inline-block;
+        margin: 15px;
+        outline: none;
+        border: none;
+        background: transparent;
+        color: #fff;
+        font-size: larger;
+        padding: 5px;
+    }
+    .dropdown-content {
+        display: none;
+    }
+    .show {
+        display: unset;
+    }
+    #education img{
+        display: none;
+    }
+    #skills{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .python .python-p,
+    .jupyter .jupyter-p,
+    .git .git-p{
+        border-radius: 0;
+        width: auto;
+    }
+    .python .python-p p,
+    .jupyter .jupyter-p p,
+    .git .git-p p{
+        width: auto;
+        padding-left: 2rem;
+        padding-top: 1rem;
+        margin-left: 0;
+        margin-right: 0;
+        padding-right: 3rem;
+    }
+    #skills{
+        margin: 0;
+    }
+    .jupyter .jupyter-p{
+        align-items: cente;
+    }
+    .python,.jupyter,.git{
+        width: auto;
+        height: 15rem;
+        margin-right: 0; 
+        padding: 0 5rem 0 5rem; 
+        padding-top: .7rem; 
+    }
+    .contact-heading{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    #contact .icons ul li a{
+        display: none;
+    }
+
+    #contact .icons{
+        margin-left: 0;
+        padding: 1rem 0 1rem 5rem;
+    }
+    .content{
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+    }
+    .content .heading{
+        font-size: 1.5rem;
+        padding-left: 5rem;
+        text-align: center;
+    }
+    .edu{
+        font-size: .7rem;
+        padding-left: 5rem;
+    }
+    .icons{
+        flex-direction: row;
+    }
+    .contact-content{
+        flex-direction: column;
+    }
+    .form-group{
+        width: 27rem;
+        padding: 1rem 0 0 5rem;
+    }
+    .text .heading{
+        font-size: 1.5rem;
+        margin: 2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        
+    }
+    .text p{
+        font-size: 1rem;
+    }
+    .text{
+        margin-left: 3rem;
+        margin-right: auto;
+        margin-top: 0rem;
+        text-align: center;
+        padding: 1rem;
+    }
+}
+@media only screen and (min-width: 992px){
+    .heading-skill{
+        height: 50px;
+        /* width: 30rem; */
+        text-align: center;
+        margin-left: 0;
+    }
+    .content-contact{
+        margin-right: 6rem;
+    }
+}
+
 

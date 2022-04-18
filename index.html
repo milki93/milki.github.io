@@ -8,27 +8,209 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:light, normal" rel="stylesheet" />
   <link href="./css/style.css" rel="stylesheet" />
   <title>Milki Dida</title>
+  
+  <script >
+    function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  } 
+  window.addEventListener('DOMContentLoaded', () => {
+    let current_year = document.querySelector('#current-year');
+    current_year.innerText = new Date().getFullYear();
+    // set_text(titles[title_count++ % titles.length], title);
+})
+let title = document.querySelector('.title');
+let titles = [
+    "Computer Scientist ",
+    "Computer Engineer ",
+    "Python Developer ",
+    "Competitive Programmer ",
+    "Data Scientist",
+];
+let title_count = 0;
+let set_text = (text, el) => {
+    new Promise(
+        function(resolve, reject) {
+            var text_len = el.innerText.length;
+            for(var skat in el.innerText){
+                setTimeout(() => {el.innerText = el.innerText.slice(0, -(0 + 1));}, 50*skat)
+            }
+        setTimeout(() => {resolve()}, 70 * text_len + 10)
+    }).then(
+        function() {
+            for (let ind in text){
+                setTimeout(() => {
+                    var new_text = el.innerText.slice(0, -1) + text[ind] + '|';
+                    el.innerText = new_text;
+                }, 50*ind);
+            }
+            
+        }, (err) => {console.log(err);}
+    ).then(
+        function() {
+            setTimeout(() => {
+                set_text(titles[title_count++ % titles.length], title);
+            }, 3000)
+        }
+    )
+    
+}
+  </script> 
 </head>
-
 <body>
   <nav>
-    <ul>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Education</a></li>
-      <li><a href="#">Skill</a></li>
-      <li><a href="#">Contact Us</a></li>
+    <button onclick="myFunction()" class="dropbtn">&#9776;</button>
+    <ul id="myDropdown" class="dropdown-content">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact Us</a></li>
     </ul>
   </nav>
   <img class="header-bg" src="./images/header_bg.svg" alt="header-bg" />
   <header>
     <div>
       <h2>Hey, I'm Milki&nbsp;Dida</h2>
-      <p>Data Scientist , Competitive Programmer, Web Designer and Developer</p>
+      <h3 class="header-heading">Computer Scientist and Engineer</h3>
+    </div>
+    <div class="title">
     </div>
     <div>
       <img src="./images/milki.jpg" alt="milki-dida" />
     </div>
   </header>
+  <div id="about">
+    <img class="about-bg" src="./images/milki2.jpg" alt="milki's photo">
+    <div class="text">
+      <h2 class="heading">About Me</h2>
+      <p>
+      My name is Milki Dida. I'm pursuing my degree at Adama Science and Techmology University.
+      I'm Python developer,highly effective at data science and machine learning.
+      I have experience in leadership,communication and problem solving abilities.I'm always energetic and eager to learn new skills. 
+    </p>
+    </div>
+  </div>
+  <div id="education">
+    <img class="img-edu" src="./images/favpng_education-icon-design-academic-degree-academic-certificate.png">
+    <div class="content">
+      <h2 class="heading">Education</h2>
+      <div class="edu">
+        <h2>Muger community Secondary and Preparatory School</h2>
+        <p>2016 - 2020 G.C Natural Science</p>
+        <h2>Adama Science and Technology University</h2>
+        <p>2020 - Present Bachelor Degree </p>
+      </div>
+    </div>
+  </div>
+  <div class="heading-skill">
+    <h2>Technical Skill</h2>
+  </div>
+  <div id="skills">
+    <div class="python">
+      <div class="python-img">
+        <img src="/images/python.png">
+      </div>
+      <div class="python-p">
+        <p>Expertise in core python, a good understanding of multi-process architecture, and the ability to system
+          integrations with good debugging skill.</p>
+      </div>
+    </div>
+    <div class="jupyter">
+      <div class="jupyter-img">
+        <img src="/images/jupyter.png">
+      </div>
+      <div class="jupyter-p">
+        <p>Developed a good experience in using Jupiter Notebook as coding environment on local machines.</p>
+      </div>
+    </div>
+    <div class="git">
+      <div class="git-img">
+        <img src="/images/git.png">
+      </div>
+      <div class="git-p">
+        <p>Good version control experience using git. Trained with GitHub to manage repositories</p>
+      </div>
+    </div>
+  </div>
+  <div id="contact">
+    <h2 class="contact-heading">Contact Me</h2>
+    <div class="contact-content">
+      <div class="icons">
+        <ul>
+          <li>
+            <img src="https://www.freepnglogos.com/uploads/telegram-logo-png-0.png" width="30"
+              alt="telegram logo png" />&nbsp;&nbsp;<a href="https://t.me/Milkfh">Telegram</a>
+          </li>
+          <li>
+            <img
+              src="https://www.freepnglogos.com/uploads/logo-gmail-png/logo-gmail-png-gmail-icon-download-png-and-vector-1.png"
+              width="30" alt="logo gmail png gmail icon download png and vector" />&nbsp;&nbsp;<a
+              href="mailto:milkidida131@gmail.com">Gmail</a>
+          </li>
+          <li>
+            <img src="https://www.freepnglogos.com/uploads/linkedin-basic-round-social-logo-png-13.png" width="30"
+              alt="linkedin basic round social logo png" />&nbsp;&nbsp;<a
+              href="https://www.linkedin.com/in/milki-dida">Linkedin</a>
+          </li>
+          <li>
+            <img src="https://www.freepnglogos.com/uploads/512x512-logo-png/512x512-logo-github-icon-35.png" width="30"
+              alt="512x512 logo github icon" />&nbsp;&nbsp;<a
+              href="https://github.com/milki93/astu-co-bot.git">Github</a>
+          </li>
+          <li>
+            <img class="image-phone" src="/images/phone.png" alt=""><span class="phone"><a href="tel:+251930845734">+251-930-845-734</a></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="content-contact">
+        <article>
+          <div>
+            <form action="https://send.pageclip.co/a5HGRacYuWURQ0S9rLNLxExE5WhiufFk/contact-form"
+              class="pageclip-form contact-form" method="post">
+              <div class="form-group">
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Tell me what is this about" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message to Milki</label>
+                <textarea name="message" id="message" placeholder="Tell me more about your interest ..."
+                  required></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="pageclip-form__submit"><span>Contact</span></button>
+              </div>
+            </form>
+          </div>
+        </article>
+        <div class="bgimg-6 bg-img"></div>
+
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+		<div class="footer-note"> All right reserved.
+			<br /> Milki Dida &copy; <span id="current-year"></span> </div>
+	</footer>
 </body>
 
 </html>
